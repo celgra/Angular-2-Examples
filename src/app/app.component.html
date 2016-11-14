@@ -1,0 +1,30 @@
+<h1>Hello</h1>
+<hero [name]="JOE" [age]="26"></hero>
+<hero [name]="Tony" [age]="26"></hero>
+
+<hero-list [heroes]="heroes"></hero-list>
+
+<simple-counter></simple-counter>
+<hr>
+Service Counter #1 <br>
+<service-counter></service-counter>
+<hr>
+Service Counter #2 <br>
+<service-counter></service-counter>
+<hr>
+Observable Service / Presentational Counter Component <br>
+<presentational-counter 
+[counter]="observableCounterService.counter$ | async"
+(increment)="observableCounterService.increment($event)"
+(decrement)="observableCounterService.decrement($event)"
+(reset)="observableCounterService.reset($event)">
+</presentational-counter>
+<hr>
+Redux Store (@ngrx/store) / Presentational Counter Component <br>
+<presentational-counter 
+[counter]="storeService.counter | async"
+(increment)="storeService.increment($event)"
+(decrement)="storeService.decrement($event)"
+(reset)="storeService.reset($event)">
+</presentational-counter>
+
