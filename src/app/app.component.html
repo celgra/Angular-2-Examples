@@ -1,9 +1,13 @@
 <h1>Hello</h1>
-<hero [name]="JOE" [age]="26"></hero>
-<hero [name]="Tony" [age]="26"></hero>
-
+<hero name="Joe" [age]="99"></hero>
+<hero name="Tony" [age]="26"></hero>
+<hero name="Sam" [age]="42"></hero>
+<hr>
 <hero-list [heroes]="heroes"></hero-list>
-
+<hr>
+Name: {{jsonData?.getIn([0,'name'])}} Email: {{jsonData?.getIn([0,'email'])}} <br>
+Address: {{jsonData?.getIn([0,'address', 'street'])}} {{jsonData?.getIn([0,'address', 'city'])}} {{jsonData?.getIn([0,'address', 'zipcode'])}}
+<hr>
 <simple-counter></simple-counter>
 <hr>
 Service Counter #1 <br>

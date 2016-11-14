@@ -1,4 +1,5 @@
 import { Store } from '@ngrx/store';
+import { AppState } from './app-state';
 import { INCREMENT, DECREMENT, RESET } from './counter.reducer';
 
 import { Injectable } from '@angular/core';
