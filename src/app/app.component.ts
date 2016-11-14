@@ -3,6 +3,7 @@ import { HeroService } from './hero.service';
 import { ObservableCounterService } from './observable-counter.service';
 import { StoreService } from './store.service';
 import { fromJS } from 'immutable';
+import { Observable } from 'rxjs/rx';
 
 @Component({
   selector: "app",
@@ -20,7 +21,8 @@ export class AppComponent implements OnInit {
   ngOnInit(){
    this.heroes = this.heroService.getHeroes();
    this.heroService.getUsers().subscribe( json => {
-     this.jsonData = fromJS(json); 
+     this.jsonData = fromJS(json);
+     this.heroService.jsonData.next(this.jsonData);
     });
   }
 

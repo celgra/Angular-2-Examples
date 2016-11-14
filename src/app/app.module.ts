@@ -14,6 +14,7 @@ import { HeroListComponent } from "./hero-list.component";
 import { SimpleCounterComponent } from "./simple-counter.component";
 import { ServiceCounterComponent } from "./service-counter.component";
 import { PresentationalCounterComponent } from "./presentational-counter.component";
+import { ImmutableDataComponent } from "./immutable-data.component";
 
 //Providers
 import { HeroService } from './hero.service';
@@ -34,7 +35,8 @@ import { StoreService } from './store.service';
     HeroListComponent,
     SimpleCounterComponent,
     ServiceCounterComponent,
-    PresentationalCounterComponent
+    PresentationalCounterComponent,
+    ImmutableDataComponent
   ],
   providers: [
     HeroService,

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { BehaviorSubject, Observable } from 'rxjs/rx';
 
 import 'rxjs/add/operator/map';
 
@@ -9,6 +10,9 @@ export class HeroService {
         {"name": "Hyperion", "age": 423},
         {"name": "Excelsior", "age": 34}
      ];
+
+     jsonData = new BehaviorSubject(null);
+     jsonData$ = this.jsonData.asObservable();
 
      constructor(private http: Http){ }
 

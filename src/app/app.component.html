@@ -10,6 +10,10 @@
 Name: {{jsonData?.getIn([0,'name'])}} Email: {{jsonData?.getIn([0,'email'])}} <br>
 Address: {{jsonData?.getIn([0,'address', 'street'])}} {{jsonData?.getIn([0,'address', 'city'])}} {{jsonData?.getIn([0,'address', 'zipcode'])}}
 <hr>
+<immutable-data
+[data]="heroService.jsonData$ | async">
+</immutable-data>
+<hr>
 <simple-counter></simple-counter>
 <hr>
 Service Counter #1 <br>
