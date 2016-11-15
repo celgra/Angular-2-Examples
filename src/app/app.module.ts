@@ -30,7 +30,7 @@ import { StoreService } from './store.service';
     StoreModule.provideStore({counter: counterReducer})
   ],
   declarations: [
-    AppComponent, 
+    AppComponent,
     HeroComponent,
     HeroListComponent,
     SimpleCounterComponent,
