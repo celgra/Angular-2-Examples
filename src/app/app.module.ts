@@ -34,7 +34,7 @@ import { TonyService } from './tony.service';
     StoreModule.provideStore({counter: counterReducer})
   ],
   declarations: [
-    AppComponent, 
+    AppComponent,
     HeroComponent,
     HeroListComponent,
     SimpleCounterComponent,
