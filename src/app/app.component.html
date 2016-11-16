@@ -3,7 +3,7 @@
 <hero name="Tony" [age]="26"></hero>
 <hero name="Sam" [age]="42"></hero>
 <hr>
-<hero-list [heroes]="heroes"></hero-list>
+<hero-list></hero-list>
 
 <tony></tony>
 <hr>
@@ -39,4 +39,11 @@ Redux Store (@ngrx/store) / Presentational Counter Component <br>
 (decrement)="storeService.decrement($event)"
 (reset)="storeService.reset($event)">
 </presentational-counter>
+<br><br><hr>
+<nav>
+    <a routerLink="/hero-list" routerLinkActivate="active">Hero List</a>
+    <a routerLink="/simple-counter" routerLinkActive="active">Simple Counter</a>
+    <a routerLink="/service-counter" routerLinkActive="active">Service Counter</a>
+</nav>
+<router-outlet>
 

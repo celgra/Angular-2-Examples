@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { HeroComponent } from './hero.component';
+import { Component } from '@angular/core';
+import { HeroService } from './hero.service';
 
 @Component({
     selector: 'hero-list',
@@ -7,5 +7,9 @@ import { HeroComponent } from './hero.component';
 })
 
 export class HeroListComponent {
-    @Input() heroes :any[];
- }
+    heroes: any[];
+
+    constructor(private heroService: HeroService) {
+        this.heroes = this.heroService.getHeroes();
+    }
+}

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser'
-import { HttpModule } from'@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
 
 // Store Stuff
 import { StoreModule } from '@ngrx/store';
@@ -15,11 +16,11 @@ import { SimpleCounterComponent } from './simple-counter.component';
 import { ServiceCounterComponent } from './service-counter.component';
 import { PresentationalCounterComponent } from './presentational-counter.component';
 import { ImmutableDataComponent } from './immutable-data.component';
-import { TonyComponent} from './tony.component';
+import { TonyComponent } from './tony.component';
 
 
 
-//Providers
+// Providers
 import { HeroService } from './hero.service';
 import { CounterService } from './counter.service';
 import { ObservableCounterService } from './observable-counter.service';
@@ -31,7 +32,8 @@ import { TonyService } from './tony.service';
     CommonModule,
     BrowserModule,
     HttpModule,
-    StoreModule.provideStore({counter: counterReducer})
+    StoreModule.provideStore({counter: counterReducer}),
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

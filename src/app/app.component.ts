@@ -1,13 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeroService } from './hero.service';
 import { ObservableCounterService } from './observable-counter.service';
 import { StoreService } from './store.service';
 import { fromJS } from 'immutable';
-import { Observable } from 'rxjs/rx';
 
 @Component({
-  selector: "app",
-  templateUrl: "./app.component.html"
+  selector: 'app',
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent implements OnInit {
@@ -16,9 +15,9 @@ export class AppComponent implements OnInit {
 
   constructor(private heroService: HeroService,
    private observableCounterService: ObservableCounterService,
-   private storeService: StoreService){ }
+   private storeService: StoreService) {}
 
-  ngOnInit(){
+  ngOnInit() {
    this.heroes = this.heroService.getHeroes();
    this.heroService.getUsers().subscribe( json => {
      this.jsonData = fromJS(json);
