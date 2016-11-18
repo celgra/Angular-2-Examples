@@ -25,7 +25,7 @@ Service Counter #2 <br>
 <service-counter></service-counter>
 <hr>
 Observable Data Service / Presentational Counter Component <br>
-<presentational-counter 
+<presentational-counter
 [counter]="observableCounterService.counter$ | async"
 (increment)="observableCounterService.increment($event)"
 (decrement)="observableCounterService.decrement($event)"
@@ -33,7 +33,7 @@ Observable Data Service / Presentational Counter Component <br>
 </presentational-counter>
 <hr>
 Redux Store (@ngrx/store) / Presentational Counter Component <br>
-<presentational-counter 
+<presentational-counter
 [counter]="storeService.counter | async"
 (increment)="storeService.increment($event)"
 (decrement)="storeService.decrement($event)"
@@ -46,4 +46,5 @@ Redux Store (@ngrx/store) / Presentational Counter Component <br>
     <a routerLink="/service-counter" routerLinkActive="active">Service Counter</a>
 </nav>
 <router-outlet>
-
+<ngrx-store-log-monitor toggleCommand="ctrl-h" positionCommand="ctrl-m">
+</ngrx-store-log-monitor>
