@@ -19,25 +19,36 @@ import { ServiceCounterComponent } from './service-counter.component';
 // import { PresentationalCounterComponent } from './presentational-counter.component';
 import { ImmutableDataComponent } from './immutable-data.component';
 import { TonyComponent } from './tony.component';
-
-
-
 // Providers
 import { HeroService } from './hero.service';
 import { CounterService } from './counter.service';
 import { ObservableCounterService } from './observable-counter.service';
 import { StoreService } from './store.service';
 import { TonyService } from './tony.service';
-
+// Debug tool
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     HttpModule,
+    AppRoutingModule,
     StoreModule.provideStore({counter: counterReducer}),
+<<<<<<< HEAD
     AppRoutingModule,
     SubRoutesModule,
     SharedModule
+=======
+    StoreDevtoolsModule.instrumentStore({
+      monitor: useLogMonitor({
+        visible: false,
+        position: 'right',
+        size: 0.5
+      })
+    }),
+    StoreLogMonitorModule
+>>>>>>> c54c8afa028ed2e94765e0df6d78b25b5601cccf
   ],
   declarations: [
     AppComponent,
