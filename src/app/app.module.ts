@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SubRoutesModule } from './child-routes/sub-routes.module';
 import { SharedModule } from './shared/shared.module';
+import { SessionModule } from './session/session.module';
 
 // Store Stuff
 import { StoreModule } from '@ngrx/store';
@@ -28,6 +29,7 @@ import { TonyService } from './tony.service';
 // Debug tool
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
     StoreModule.provideStore({counter: counterReducer}),
     SubRoutesModule,
     SharedModule,
+    SessionModule,
     StoreDevtoolsModule.instrumentStore({
       monitor: useLogMonitor({
         visible: false,
@@ -45,7 +48,6 @@ import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
       })
     }),
     StoreLogMonitorModule
->>>>>>> c54c8afa028ed2e94765e0df6d78b25b5601cccf
   ],
   declarations: [
     AppComponent,
