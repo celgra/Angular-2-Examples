@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import {TonyService} from './tony.service';
+import { TonyService } from './tony.service';
 
 @Component({
-    selector:"tony",
-    templateUrl: "tony.component.html"
+    selector: 'tony',
+    templateUrl: 'tony.component.html'
 })
 
 export class TonyComponent {

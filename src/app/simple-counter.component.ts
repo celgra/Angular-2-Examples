@@ -15,15 +15,15 @@ export class SimpleCounterComponent implements OnInit {
 
     constructor() { }
 
-    increment(){
+    increment() {
         this.counter++;
     }
 
-    decrement(){
+    decrement() {
         this.counter--;
     }
 
-    reset(){
+    reset() {
         this.counter = 0;
     }
 

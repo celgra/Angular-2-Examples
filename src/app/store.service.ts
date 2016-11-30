@@ -16,12 +16,12 @@ export class StoreService {
     increment() {
         this.store.dispatch({ type: INCREMENT });
     }
-    
+
     decrement() {
         this.store.dispatch({ type: DECREMENT})
     }
 
-    reset(){
+    reset() {
         this.store.dispatch({ type: RESET});
     }
 }

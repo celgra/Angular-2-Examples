@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+import { SubRoutesModule } from './child-routes/sub-routes.module';
+import { SharedModule } from './shared/shared.module';
 
 // Store Stuff
 import { StoreModule } from '@ngrx/store';
@@ -14,7 +16,7 @@ import { HeroComponent } from './hero.component';
 import { HeroListComponent } from './hero-list.component';
 import { SimpleCounterComponent } from './simple-counter.component';
 import { ServiceCounterComponent } from './service-counter.component';
-import { PresentationalCounterComponent } from './presentational-counter.component';
+// import { PresentationalCounterComponent } from './presentational-counter.component';
 import { ImmutableDataComponent } from './immutable-data.component';
 import { TonyComponent } from './tony.component';
 
@@ -33,7 +35,9 @@ import { TonyService } from './tony.service';
     BrowserModule,
     HttpModule,
     StoreModule.provideStore({counter: counterReducer}),
-    AppRoutingModule
+    AppRoutingModule,
+    SubRoutesModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,
@@ -41,7 +45,6 @@ import { TonyService } from './tony.service';
     HeroListComponent,
     SimpleCounterComponent,
     ServiceCounterComponent,
-    PresentationalCounterComponent,
     ImmutableDataComponent,
     TonyComponent
   ],

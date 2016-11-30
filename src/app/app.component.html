@@ -1,4 +1,4 @@
-<h1>Hello</h1>
+<!--<h1>Hello</h1>
 <hero name="Joe" [age]="99"></hero>
 <hero name="Tony" [age]="26"></hero>
 <hero name="Sam" [age]="42"></hero>
@@ -15,7 +15,7 @@ Address: {{jsonData?.getIn([0,'address', 'street'])}} {{jsonData?.getIn([0,'addr
 <immutable-data
 [data]="heroService.jsonData$ | async">
 </immutable-data>
-<hr>
+<hr>-->
 <simple-counter></simple-counter>
 <hr>
 Service Counter #1 <br>
@@ -45,6 +45,9 @@ Redux Store (@ngrx/store) / Presentational Counter Component <br>
     <a routerLink="/simple-counter" routerLinkActive="active">Simple Counter</a>
     <a routerLink="/service-counter" routerLinkActive="active">Service Counter</a>
     <a routerLink="/tony" routerLinkActive="active"> Tony Component</a>
+    <a routerLink="/sub-routes" routerLinkActive="active"> Sub Routes</a>
 </nav>
 <router-outlet>
+<ngrx-store-log-monitor toggleCommand="ctrl-h" positionCommand="ctrl-m">
+</ngrx-store-log-monitor>
 
