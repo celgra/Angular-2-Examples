@@ -35,11 +35,8 @@ import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
     HttpModule,
     AppRoutingModule,
     StoreModule.provideStore({counter: counterReducer}),
-<<<<<<< HEAD
-    AppRoutingModule,
     SubRoutesModule,
-    SharedModule
-=======
+    SharedModule,
     StoreDevtoolsModule.instrumentStore({
       monitor: useLogMonitor({
         visible: false,
