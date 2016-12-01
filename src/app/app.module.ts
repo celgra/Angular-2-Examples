@@ -5,11 +5,9 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SubRoutesModule } from './child-routes/sub-routes.module';
 import { SharedModule } from './shared/shared.module';
-
 // Store Stuff
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
-
 // Component
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero.component';
@@ -45,7 +43,6 @@ import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
       })
     }),
     StoreLogMonitorModule
->>>>>>> c54c8afa028ed2e94765e0df6d78b25b5601cccf
   ],
   declarations: [
     AppComponent,

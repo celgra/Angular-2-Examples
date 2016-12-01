@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
         <button (click)="decrement()">DECREMENT</button>
         <button (click)="reset()">RESET</button>
     `,
-    changeDetection: ChangeDetectionStrategy.OnPush 
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PresentationalCounterComponent {
     @Input() counter: number;
