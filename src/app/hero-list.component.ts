@@ -5,7 +5,6 @@ import { HeroService } from './hero.service';
     selector: 'hero-list',
     templateUrl: './hero-list.component.html'
 })
-
 export class HeroListComponent {
     heroes: any[];
 
